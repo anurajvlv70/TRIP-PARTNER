@@ -6,19 +6,16 @@
             width: 100%;
             margin: 0;
             padding: 0;
+            overflow: hidden; /* Prevent scrollbars */
         }
 
         .auth-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100vh; /* Full height of the viewport */
             width: 100%; /* Full width */
-           
-            background-image: url('{{ asset('your-image.jpg') }}');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #85c1e9; /* Set background color to blue */
             position: relative;
         }
 

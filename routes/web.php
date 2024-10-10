@@ -41,5 +41,7 @@ Route::get('/trip-diary3',[TravellerController::class,'diary4']);
 Route::get('/trip-photo',[TravellerController::class,'photo']);
 Route::post('/trip-photo-store', [TravellerController::class, 'trip_photo'])->name('trip-photo');
 Route::get('/photo-view',[TravellerController::class,'allRecord4'])->name('photo-view');
-
+Route::get('/trip-expence',[TravellerController::class,'expence']);
+Route::post('/trip-expence', [TravellerController::class, 'ExpenceStore'])->name('trip-expence');
+Route::get('/expence-view',[TravellerController::class,'allRecord5'])->name('expence-view');
 require __DIR__.'/auth.php';

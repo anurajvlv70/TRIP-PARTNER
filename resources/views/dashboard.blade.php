@@ -91,9 +91,12 @@
                 z-index: 2; /* Bring content above the overlay */
             }
             .btn-photos {
-        background-color: #ffcc00; /* Change to any color you prefer */
-        color: #000; /* Text color */
-        border: none;
+                background-color:  #e70a60; /* Different color */
+                color: white;/* Text color */
+        border: 2px solid #fff;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out; 
+        box-shadow: 0 4px 15px rgba(0, 140, 186, 0.4);
     }
 
     .btn-photos:hover {
@@ -122,23 +125,54 @@
     </head>
     <body>
         <div class="background">
-            <div class="overlay"></div>
-            <div class="content text-center">
-                <h1 class="fw-bolder text-white mb-4" style="font-size: 3rem;">
-                    TRIP PARTNER
-                </h1>
-                <div class="d-flex flex-column align-items-center">
-                    <a href="{{ url('/traveller2') }}" class="btn btn-custom rounded-0 w-25 mb-3">READY</a>
-                    <a href="{{ route('traveller-detail-view2') }}" class="btn btn-custom rounded-0 w-25 mb-3">JOIN</a>
-                    <a href="{{ url('/diary') }}" class="btn btn-custom rounded-0 w-25 mb-3">Diary</a>
-                    <a href="{{ url('/trip-photo') }}" class="btn btn-photos rounded-0 w-25 mb-3">Photos</a> <!-- Updated here -->
-                    <a href="{{ url('/photo-view') }}" class="btn btn-view rounded-0 w-25 mb-3">Gallery</a> 
-                    <a href="{{ url('/trip-diary') }}" class="btn btn-photos rounded-0 w-25">View Diary</a>
-                   
+    <div class="overlay"></div>
+    <div class="content text-center">
+        <h1 class="fw-bolder text-white mb-4" style="font-size: 3rem;">
+            TRIP PARTNER
+        </h1>
 
-                </div>
+        <!-- Row 1: READY and JOIN -->
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-3">
+                <a href="{{ url('/traveller2') }}" class="btn btn-photos rounded-0 w-100">READY</a>
+            </div>
+            <div class="col-md-3">
+                <a href="{{ route('traveller-detail-view2') }}" class="btn btn-photos rounded-0 w-100">JOIN</a>
             </div>
         </div>
+
+        <!-- Row 2: Photos and Gallery -->
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-3">
+                <a href="{{ url('/trip-photo') }}" class="btn btn-view rounded-0 w-100">Photos</a>
+            </div>
+            <div class="col-md-3">
+                <a href="{{ url('/photo-view') }}" class="btn btn-view rounded-0 w-100">Gallery</a>
+            </div>
+        </div>
+
+        <!-- Row 3: Diary and View Diary -->
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-3">
+                <a href="{{ url('/diary') }}" class="btn btn-custom rounded-0 w-100">Diary</a>
+            </div>
+            <div class="col-md-3">
+                <a href="{{ url('/trip-diary') }}" class="btn btn-photos rounded-0 w-100">View Diary</a>
+            </div>
+        </div>
+
+        <!-- Row 4: Expence and Expence View -->
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-3">
+                <a href="{{ url('/trip-expence') }}" class="btn btn-view rounded-0 w-100">Expence</a>
+            </div>
+            <div class="col-md-3">
+                <a href="{{ url('/expence-view') }}" class="btn btn-custom rounded-0 w-100">Expence View</a>
+            </div>
+        </div>
+    </div>
+</div>
+
     </body>
     </html>
 </x-app-layout>

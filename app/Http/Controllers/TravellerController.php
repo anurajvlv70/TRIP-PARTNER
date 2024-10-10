@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\traveller;
 use App\Models\diary;
 use App\Models\photo;
+use App\Models\expence;
 
 class TravellerController extends Controller
 {
@@ -218,6 +219,36 @@ class TravellerController extends Controller
             $userdetails=photo::all();
             //  dd($userdetails);
             return view('traveller.photo-view',compact('userdetails'));
+            
+           }
+
+           public function expence(){
+    
+           
+            return view('traveller.trip-expence');
+           
+        }
+
+        public function ExpenceStore(Request $request)
+        {
+    
+            $user = expence::create([
+                'place'=>$request->place,
+                'date6' => $request->date6,
+                'food' => $request->food,
+                'travel' => $request->travel,
+                'room' => $request->room,
+                'other' => $request->other,
+                
+            ]);
+    
+            return redirect()->route('trip-expence');
+        }
+        public function allRecord5(){
+    
+            $userdetails=expence::all();
+            //  dd($userdetails);
+            return view('traveller.expence-view',compact('userdetails'));
             
            }
 }

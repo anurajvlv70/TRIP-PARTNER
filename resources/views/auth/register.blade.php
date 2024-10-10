@@ -1,5 +1,6 @@
 <x-guest-layout>
     <!-- Full-screen background with overlay -->
+    <h1 class="text-center text-2xl font-semibold text-gray-700 mb-6">TRIP PARTNER</h1>
     <div class="max-h-screen flex items-center justify-center" style="background-image: url({{asset('trip2.jpg')}}); background-size: cover; background-position: center;">
         <div class="bg-white bg-opacity-90 p-8 rounded-lg shadow-lg w-full max-w-md">
             <h1 class="text-center text-2xl font-semibold text-gray-700 mb-6">Create an Account</h1>
@@ -79,6 +80,7 @@
             </form>
         </div>
     </div>
+
 </x-guest-layout>
 
 
