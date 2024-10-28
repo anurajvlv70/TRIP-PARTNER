@@ -144,10 +144,10 @@
         <!-- Row 2: Photos and Gallery -->
         <div class="row justify-content-center mb-3">
             <div class="col-md-3">
-                <a href="{{ url('/trip-photo') }}" class="btn btn-view rounded-0 w-100">Photos</a>
+                <a href="{{ url('/trip-photo') }}" class="btn btn-view rounded-0 w-100">Photos   </a>
             </div>
             <div class="col-md-3">
-                <a href="{{ url('/photo-view') }}" class="btn btn-view rounded-0 w-100">Gallery</a>
+                <a href="{{ url('/photo-view') }}" class="btn btn-view rounded-0 w-100">Gallery   </a>
             </div>
         </div>
 
@@ -170,6 +170,11 @@
                 <a href="{{ url('/expence-view') }}" class="btn btn-custom rounded-0 w-100">Expence View</a>
             </div>
         </div>
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-3">
+                <a href="{{ url('/list') }}" class="btn btn-custom rounded-0 w-100">list</a>
+            </div>
+</div>
     </div>
 </div>
 

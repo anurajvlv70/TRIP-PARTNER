@@ -78,6 +78,14 @@ class TravellerController extends Controller
         return view('traveller.join-view',compact('userdetails'));
         
        }
+
+       public function allRecord8(){
+    
+        $userdetails=traveller::all();
+        //  dd($userdetails);
+        return view('traveller.list-view',compact('userdetails'));
+        
+       }
        public function detail_view (){
         $userdetails=traveller::where('u_id',Auth()->user()->id)->first();
         //dd($userdetails);
